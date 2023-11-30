@@ -6,5 +6,20 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'my-app';
+  value = 0;
+
+  calBuffet(value: string) {
+    const price = Number(value);
+    // this.value = Number(value) * 3 / 4
+    // this.value = (Number(value) * 3) / 4;
+    this.value = (price * 3) / 4
+  }
+
+  testClick() {
+    console.log('test EventBinding');
+  }
+
+  testNumberChange(value: number) {
+    console.log('test NumberChange form action-bar: ', value);
+  }
 }
